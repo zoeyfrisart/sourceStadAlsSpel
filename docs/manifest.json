@@ -3,29 +3,19 @@
   "name": "BerGo The Other Side Of Berlin",
   "icons": [
     {
-      "src": "icons/launcher-icon-1x.png",
+      "src": "./icons/launcher-icon-1x.png",
       "type": "image/png",
       "sizes": "61x61"
     },
     {
-      "src": "icons/launcher-icon-2x.png",
+      "src": "./icons/launcher-icon-2x.png",
       "type": "image/png",
       "sizes": "121x121"
     },
     {
-      "src": "icons/launcher-icon-4x.png",
+      "src": "./icons/launcher-icon-4x.png",
       "type": "image/png",
       "sizes": "241x241"
-    },
-    {
-      "src": "icons/launcher-icon-8x.png",
-      "type": "image/png",
-      "sizes": "481x481"
-    },
-    {
-      "src": "icons/launcher-icon-16x.png",
-      "type": "image/png",
-      "sizes": "960x960"
     }
   ],
   "start_url": "index.html?launcher=true",

@@ -1,0 +1,75 @@
+            <div class="row row1">
+              @@if(asset1 !== "") {
+                @@if(asset1 !== "reset"){
+                  <div class="col-xs-3 col-md-1">
+                    <picture class="asset-gender" data-assetsrc="@@asset1">
+                      <source srcset="links/img/assets/@@asset1.webp" type="image/webp">
+                      <img class="asset-gender" src="links/img/assets/@@asset1.png" alt="@@asset1Desc">
+                    </picture>
+                  </div>
+                }
+                @@if(asset1 === "reset"){
+                  <div class="col-xs-3 reset-wrap">
+                    <i class="fa fa-times reset" data-cat="@@asset1Desc" aria-hidden="true"></i>
+                  </div>
+                }
+              }
+              @@if(asset2 !== "") {
+              <div class="col-xs-3 col-md-1">
+                <picture class="asset-gender" data-assetsrc="@@asset2">
+                  <source srcset="links/img/assets/@@asset2.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset2.png" alt="@@asset2Desc">
+                </picture>
+              </div>
+              }
+              @@if(asset3 !== "") {
+              <div class="col-xs-3 col-md-1">
+                <picture class="asset-gender" data-assetsrc="@@asset3">
+                  <source srcset="links/img/assets/@@asset3.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset3.png" alt="@@asset3Desc">
+                </picture>
+              </div>
+              }
+              @@if(asset4 !== "") {
+              <div class="col-xs-3 col-md-1">
+                <picture class="asset-gender" data-assetsrc="@@asset4">
+                  <source srcset="links/img/assets/@@asset4.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset4.png" alt="@@asset4Desc">
+                </picture>
+              </div>
+              }
+            </div>
+            <div class="row">
+              @@if(asset5 !== "") {
+              <div class="col-xs-3">
+                <picture class="asset-gender" data-assetsrc="@@asset5">
+                  <source srcset="links/img/assets/@@asset5.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset5.png" alt="@@asset5Desc">
+                </picture>
+              </div>
+              }
+              @@if(asset6 !== "") {
+              <div class="col-xs-3">
+                <picture class="asset-gender" data-assetsrc="@@asset6">
+                  <source srcset="links/img/assets/@@asset6.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset6.png" alt="@@asset6Desc">
+                </picture>
+              </div>
+              }
+              @@if(asset7 !== "") {
+              <div class="col-xs-3">
+                <picture class="asset-gender" data-assetsrc="@@asset7">
+                  <source srcset="links/img/assets/@@asset7.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset7.png" alt="@@asset7Desc">
+                </picture>
+              </div>
+              }
+              @@if(asset8 !== "") {
+              <div class="col-xs-3">
+                <picture class="asset-gender" data-assetsrc="@@asset8">
+                  <source srcset="links/img/assets/@@asset8.webp" type="image/webp">
+                  <img class="asset-gender" src="links/img/assets/@@asset8.png" alt="@@asset8Desc">
+                </picture>
+              </div>
+              }
+            </div>

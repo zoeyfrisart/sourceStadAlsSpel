@@ -1,0 +1,32 @@
+<footer>
+  @@if (active === 'home') {
+    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home active" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy" aria-hidden="true"></i></a>
+  }
+  @@if (active === 'settings') {
+    <a href="settings.html" class=""><i class="fa fa-cog active" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy" aria-hidden="true"></i></a>
+  }
+  @@if (active === 'notification') {
+    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell active" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy" aria-hidden="true"></i></a>
+  }
+  @@if (active === 'trophy') {
+    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy active" aria-hidden="true"></i></a>
+  }
+  @@if (active === undefined || active === null || active === '') {
+    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy" aria-hidden="true"></i></a>
+  }
+</footer>

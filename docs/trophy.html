@@ -1,101 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#333333">
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
-  <style>
-    body{
-      background: #d50000;
-    }
-  </style>
-  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://20578.tk/app/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://20578.tk/app/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://20578.tk/app/favicon-16x16.png">
-  <link rel="mask-icon" href="https://20578.tk/app/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="https://20578.tk/app/favicon.ico">
-  <meta name="msapplication-config" content="https://20578.tk/app/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-  <script>
-    document.createElement("picture");
-  </script>
-  <script src="js/picturefill.min.js" async></script>
-  <title>Bergo</title>
-  <!--<script src="https://use.fontawesome.com/30888a8b47.js"></script>-->
-</head>
+@@include('./components/head.html')
 <body>
   <div class="container-fluid highscores">
-    <header class="charHead">
-  <a href="edit-character.html">
-  <div class="character ">
-  <picture class="char-ear">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="ear">
-  </picture>
-  <picture class="char-bang">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="bangs">
-  </picture>
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="hair front">
-  </picture>
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="hair face">
-  </picture>
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="face back">
-  </picture>
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="mantle front">
-  </picture>
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="clothing">
-  </picture>
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/male/base/noneall.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/male/base/noneall.png" alt="base (skin)">
-  </picture>
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="mantle back">
-  </picture>
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
-    <img class="relative" src="links/img/placeholder.png" alt="hair back">
-  </picture>
-</div>
-  </a>
-  <div class="col-xs-8 other-char">
-    <div class="xpBar">
-      <p>1</p>
-      <div class="progress">
-        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
-          <span class="sr-only">45% Complete</span>
-        </div>
-      </div>
-      <p>2</p>
-    </div>
-    
-    <div class="header-part">
-      <h1>highscores</h1>
-    </div>
-    
-  </div>
-</header>
+    @@include('./components/header-char.html', {
+      "title": "highscores"
+    })
     <div class="row">
       <div class="col-xs-12">
         <div class="yourpos">your currently #4042</div>
@@ -106,68 +14,18 @@
         <ul class="highscoreList">
           <li class="rank pos1">
             <div class="row">
-                <div class="highScoreChar">
-  
-  <picture class="char-ear">
-    <source class="relative" srcset="links/img/assets/ears/2_black_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/ears/2_black_front.png" alt="ear">
-  </picture>
-  
-  
-  <picture class="char-bang">
-    <source class="relative" srcset="links/img/assets/female/bangs/1_black_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/bangs/1_black_front.png" alt="bangs">
-  </picture>
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/female/hair/1_black_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/1_black_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_green_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_green_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_green_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_green_back.png" alt="face back">
-  </picture>
-  
-  
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/assets/mantle/7_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/7_blue_front.png" alt="mantle front">
-  </picture>
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/female/body/21_red.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/body/21_red.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/female/base/white.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/base/white.png" alt="base (skin)">
-  </picture>
-  
-  
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/assets/mantle/7_blue_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/7_blue_back.png" alt="mantle back">
-  </picture>
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/female/hair/1_black_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/1_black_back.png" alt="hair back">
-  </picture>
-  
-</div>
+                @@include('./components/character-high.html', {
+                  "ear": "ears/2_black_front",
+                  "bang": "female/bangs/1_black_front",
+                  "hairf": "female/hair/1_black_front",
+                  "face": "face/1_green_front",
+                  "faceb": "face/1_green_back",
+                  "manf": "mantle/7_blue_front",
+                  "clothing": "female/body/21_red",
+                  "base": "female/base/white",
+                  "manb": "mantle/7_blue_back",
+                  "hairb": "female/hair/1_black_back"
+                })
               <h3>1</h3>
               <p class="playerName">TheLegend27</p>
               <p class="likes">3200<span> likes</span></p>
@@ -175,68 +33,18 @@
           </li>
           <li class="rank pos2">
             <div class="row">
-                <div class="highScoreChar">
-  
-  <picture class="char-ear">
-    <source class="relative" srcset="links/img/assets/ears/3_pink_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/ears/3_pink_front.png" alt="ear">
-  </picture>
-  
-  
-  <picture class="char-bang">
-    <source class="relative" srcset="links/img/assets/female/bangs/2_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/bangs/2_blue_front.png" alt="bangs">
-  </picture>
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/female/hair/2_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/2_blue_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_purple_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_purple_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_purple_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_purple_back.png" alt="face back">
-  </picture>
-  
-  
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/assets/mantle/4_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/4_blue_front.png" alt="mantle front">
-  </picture>
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/female/body/18_red.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/body/18_red.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/female/base/black.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/base/black.png" alt="base (skin)">
-  </picture>
-  
-  
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/assets/mantle/4_blue_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/4_blue_back.png" alt="mantle back">
-  </picture>
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/female/hair/2_blue_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/2_blue_back.png" alt="hair back">
-  </picture>
-  
-</div>
+                @@include('./components/character-high.html', {
+                  "ear": "ears/3_pink_front",
+                  "bang": "female/bangs/2_blue_front",
+                  "hairf": "female/hair/2_blue_front",
+                  "face": "face/1_purple_front",
+                  "faceb": "face/1_purple_back",
+                  "manf": "mantle/4_blue_front",
+                  "clothing": "female/body/18_red",
+                  "base": "female/base/black",
+                  "manb": "mantle/4_blue_back",
+                  "hairb": "female/hair/2_blue_back"
+                })
               <h3>2</h3>
               <p class="playerName">Samandriel</p>
               <p class="likes">3165<span> likes</span></p>
@@ -244,68 +52,18 @@
           </li>
           <li class="rank pos3">
             <div class="row">
-                <div class="highScoreChar">
-  
-  <picture class="char-ear">
-    <source class="relative" srcset="links/img/assets/ears/1_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/ears/1_red_front.png" alt="ear">
-  </picture>
-  
-  
-  <picture class="char-bang">
-    <source class="relative" srcset="links/img/assets/female/bangs/10_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/bangs/10_red_front.png" alt="bangs">
-  </picture>
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/female/hair/22_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/22_red_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_green_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_green_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_green_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_green_back.png" alt="face back">
-  </picture>
-  
-  
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/assets/mantle/9_green_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/9_green_front.png" alt="mantle front">
-  </picture>
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/female/body/10_purple.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/body/10_purple.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/female/base/white.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/base/white.png" alt="base (skin)">
-  </picture>
-  
-  
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/assets/mantle/9_green_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/9_green_back.png" alt="mantle back">
-  </picture>
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/female/hair/22_red_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/22_red_back.png" alt="hair back">
-  </picture>
-  
-</div>
+                @@include('./components/character-high.html', {
+                  "ear": "ears/1_red_front",
+                  "bang": "female/bangs/10_red_front",
+                  "hairf": "female/hair/22_red_front",
+                  "face": "face/1_green_front",
+                  "faceb": "face/1_green_back",
+                  "manf": "mantle/9_green_front",
+                  "clothing": "female/body/10_purple",
+                  "base": "female/base/white",
+                  "manb": "mantle/9_green_back",
+                  "hairb": "female/hair/22_red_back"
+                })
               <h3>3</h3>
               <p class="playerName">Alexander</p>
               <p class="likes">2984<span> likes</span></p>
@@ -313,63 +71,18 @@
           </li>
           <li class="rank pos4">
             <div class="row">
-              <div class="highScoreChar">
-  
-  <picture class="char-ear">
-    <source class="relative" srcset="links/img/assets/ears/3_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/ears/3_blue_front.png" alt="ear">
-  </picture>
-  
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/female/hair/22_blue_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/22_blue_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_pink_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_pink_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_pink_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_pink_back.png" alt="face back">
-  </picture>
-  
-  
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/assets/mantle/10_yellow_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/10_yellow_front.png" alt="mantle front">
-  </picture>
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/female/body/21_yellow.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/body/21_yellow.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/female/base/white.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/base/white.png" alt="base (skin)">
-  </picture>
-  
-  
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/assets/mantle/10_yellow_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/10_yellow_back.png" alt="mantle back">
-  </picture>
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/female/hair/22_blue_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/22_blue_back.png" alt="hair back">
-  </picture>
-  
-</div>
+              @@include('./components/character-high.html', {
+                  "ear": "ears/3_blue_front",
+                  "bang": "",
+                  "hairf": "female/hair/22_blue_front",
+                  "face": "face/1_pink_front",
+                  "faceb": "face/1_pink_back",
+                  "manf": "mantle/10_yellow_front",
+                  "clothing": "female/body/21_yellow",
+                  "base": "female/base/white",
+                  "manb": "mantle/10_yellow_back",
+                  "hairb": "female/hair/22_blue_back"
+                })
               <h3>4</h3>
               <p class="playerName">Niles</p>
               <p class="likes">2866<span> likes</span></p>
@@ -377,48 +90,18 @@
           </li>
           <li class="rank pos5">
             <div class="row">
-              <div class="highScoreChar">
-  
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/male/hair/19_dbrown_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/male/hair/19_dbrown_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_red_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_red_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_red_back.png" alt="face back">
-  </picture>
-  
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/female/body/7_red.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/body/7_red.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/male/base/white.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/male/base/white.png" alt="base (skin)">
-  </picture>
-  
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/male/hair/19_dbrown_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/male/hair/19_dbrown_back.png" alt="hair back">
-  </picture>
-  
-</div>
+              @@include('./components/character-high.html', {
+                  "ear": "",
+                  "bang": "",
+                  "hairf": "male/hair/19_dbrown_front",
+                  "face": "face/1_red_front",
+                  "faceb": "face/1_red_back",
+                  "manf": "",
+                  "clothing": "female/body/7_red",
+                  "base": "male/base/white",
+                  "manb": "",
+                  "hairb": "male/hair/19_dbrown_back"
+                })
               <h3>5</h3>
               <p class="playerName">User1337</p>
               <p class="likes">2765<span> likes</span></p>
@@ -426,63 +109,18 @@
           </li>
           <li class="rank pos6">
             <div class="row">
-              <div class="highScoreChar">
-  
-  
-  <picture class="char-bang">
-    <source class="relative" srcset="links/img/assets/female/bangs/14_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/bangs/14_red_front.png" alt="bangs">
-  </picture>
-  
-  
-  <picture class="char-hairf">
-    <source class="relative" srcset="links/img/assets/female/hair/12_red_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/12_red_front.png" alt="hair front">
-  </picture>
-  
-  
-  <picture class="char-face">
-    <source class="relative" srcset="links/img/assets/face/1_dbrown_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_dbrown_front.png" alt="hair face">
-  </picture>
-  
-  
-  <picture class="char-face-back">
-    <source class="relative" srcset="links/img/assets/face/1_dbrown_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/face/1_dbrown_back.png" alt="face back">
-  </picture>
-  
-  
-  <picture class="char-manF">
-    <source class="relative" srcset="links/img/assets/mantle/14_purple_front.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/14_purple_front.png" alt="mantle front">
-  </picture>
-  
-  
-  <picture class="char-cloth">
-    <source class="relative" srcset="links/img/assets/male/body/4_green.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/male/body/4_green.png" alt="clothing">
-  </picture>
-  
-  
-  <picture class="char-base">
-    <source class="relative" srcset="links/img/assets/female/base/white.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/base/white.png" alt="base (skin)">
-  </picture>
-  
-  
-  <picture class="char-manB">
-    <source class="relative" srcset="links/img/assets/mantle/14_purple_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/mantle/14_purple_back.png" alt="mantle back">
-  </picture>
-  
-  
-  <picture class="char-hairb">
-    <source class="relative" srcset="links/img/assets/female/hair/12_red_back.webp" type="image/webp">
-    <img class="relative" src="links/img/assets/female/hair/12_red_back.png" alt="hair back">
-  </picture>
-  
-</div>
+              @@include('./components/character-high.html', {
+                  "ear": "",
+                  "bang": "female/bangs/14_red_front",
+                  "hairf": "female/hair/12_red_front",
+                  "face": "face/1_dbrown_front",
+                  "faceb": "face/1_dbrown_back",
+                  "manf": "mantle/14_purple_front",
+                  "clothing": "male/body/4_green",
+                  "base": "female/base/white",
+                  "manb": "mantle/14_purple_back",
+                  "hairb": "female/hair/12_red_back"
+                })
               <h3>6</h3>
               <p class="playerName">Rupert</p>
               <p class="likes">2433<span> likes</span></p>
@@ -492,24 +130,9 @@
       </div>
     </div>
 
-    <footer>
-  
-  
-  
-  
-    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
-    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
-    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
-    <a href="trophy.html" class=""><i class="fa fa-trophy active" aria-hidden="true"></i></a>
-  
-  
-</footer>
+    @@include('./components/footer.html', {
+      "active": "trophy"
+    })
   </div>
 
-<!-- Scripts -->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-</html>
+@@include('./components/scripts.html')

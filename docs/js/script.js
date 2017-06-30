@@ -1,7 +1,7 @@
 // Function that listenes for click on the tabs in Create
 $('.nav-tabs li a').click(function (e) {
-  e.preventDefault();
-  $(this).tab('show');
+  e.preventDefault()
+  $(this).tab('show')
 });
 
 // Functions to iniate the Swiper Sliders
@@ -144,7 +144,7 @@ if (localStorage.gender === undefined) {
 };
 
 if (localStorage.base === undefined) {
-  localStorage.setItem('base', '/base/noneall.webp');
+  localStorage.setItem('base', 'base/noneall.webp');
 }
 
 //  Load Assets to character
@@ -185,30 +185,31 @@ const mantleBack = document.querySelector('.char-manB');
 const mantleBackWebp = document.querySelector('.char-manB > source');
 const mantleBackImg = document.querySelector('.char-manB > img');
 
-const charHairBack = document.querySelector('.char-hairb');
+const charHairBack = document.querySelector('.char-hairb')
 const charHairBackWebp = document.querySelector('.char-hairb > source');
 const charHairBackImg = document.querySelector('.char-hairb > img');
 
+
 // Function to set the Front and back
 function setCharAssets(assetCategory, assetPart, genderNeeded, frontNeeded, webpElem, imgFallback) {
-  const inStorage = localStorage.getItem(`${ assetCategory }`);
-  const genderLink = `${ localStorage.gender }`;
+  const inStorage = localStorage.getItem(`${assetCategory}`);
+  const genderLink = `${localStorage.gender}/`;
   // Check if asset is defined
   if (inStorage !== undefined && inStorage !== null) {
     const splittedAsset = inStorage.split('front');
     if (splittedAsset[1] !== undefined) {
       assetPart.classList.remove('hidden');
-      const front = `${ splittedAsset[0] }front${ splittedAsset[1] }`;
-      const back = `${ splittedAsset[0] }back${ splittedAsset[1] }`;
-      webpElem.srcset = `links/img/assets/${ genderNeeded ? genderLink : '' }${ frontNeeded ? front : back }.webp`;
-      imgFallback.src = `links/img/assets/${ genderNeeded ? genderLink : '' }${ frontNeeded ? front : back }.png`;
+      const front = `${splittedAsset[0]}front${splittedAsset[1]}`;
+      const back = `${splittedAsset[0]}back${splittedAsset[1]}`;
+      webpElem.srcset = `links/img/assets/${genderNeeded ? genderLink : ''}${frontNeeded ? front : back}.webp`
+      imgFallback.src = `links/img/assets/${genderNeeded ? genderLink : ''}${frontNeeded ? front : back}.png`;
     } else {
       assetPart.classList.remove('hidden');
       const subSplitAsset = inStorage.split('back');
-      const front = `${ subSplitAsset[0] }front${ subSplitAsset[1] }`;
-      const back = `${ subSplitAsset[0] }back${ subSplitAsset[1] }`;
-      webpElem.srcset = `links/img/assets/${ genderNeeded ? genderLink : '' }${ frontNeeded ? front : back }.webp`;
-      imgFallback.src = `links/img/assets/${ genderNeeded ? genderLink : '' }${ frontNeeded ? front : back }.png`;
+      const front = `${subSplitAsset[0]}front${subSplitAsset[1]}`;
+      const back = `${subSplitAsset[0]}back${subSplitAsset[1]}`;
+      webpElem.srcset = `links/img/assets/${genderNeeded ? genderLink : ''}${frontNeeded ? front : back}.webp`;
+      imgFallback.src = `links/img/assets/${genderNeeded ? genderLink : ''}${frontNeeded ? front : back}.png`;
     }
   } else {
     // console.log(assetPart)
@@ -218,14 +219,14 @@ function setCharAssets(assetCategory, assetPart, genderNeeded, frontNeeded, webp
 
 // Funtion to check if the Assets are defined in localstorage
 function checkLocalStorageAsset(assetCategory, assetPart, genderNeeded, webpElem, imgFallback) {
-  const inStorage = localStorage.getItem(`${ assetCategory }`);
-  const genderLink = `${ localStorage.gender }`;
+  const inStorage = localStorage.getItem(`${assetCategory}`);
+  const genderLink = `${localStorage.gender}/`;
   // console.log(inStorage);
   if (inStorage !== undefined && inStorage !== null) {
     // Set the Image Source
     assetPart.classList.remove('hidden');
-    webpElem.srcset = `links/img/assets/${ genderNeeded ? genderLink : '' }${ inStorage }.webp`;
-    imgFallback.src = `links/img/assets/${ genderNeeded ? genderLink : '' }${ inStorage }.png`;
+    webpElem.srcset = `links/img/assets/${genderNeeded ? genderLink : ''}${inStorage}.webp`;
+    imgFallback.src = `links/img/assets/${genderNeeded ? genderLink : ''}${inStorage}.png`;
   } else {
     // Remove the Img element
     // console.log(assetPart)
@@ -247,18 +248,21 @@ function initiateCharacter() {
   setCharAssets('hair', charHairBack, true, false, charHairBackWebp, charHairBackImg); // Hair back
 }
 
+
 // Variables of the Switch
 const genderToggle = document.querySelector('.gender-switch');
 const genderSwitch = document.querySelector('[name="gender"]');
 
+ 
 //  Function to make the slider be the gender defined in localstorage. After reload
 function genderSwitcher() {
-  if (localStorage.gender === 'male') {
+  if (localStorage.gender === 'male'){
     genderSwitch.checked = true;
   } else if (localStorage.gender === 'female') {
     genderSwitch.checked = false;
   }
 }
+
 
 // Function to write the gender to localstorage when a user switches the Gender switch
 function switchGender(e) {
@@ -277,6 +281,8 @@ if (document.querySelector('.gender') !== null) {
   genderSwitcher();
   genderSwitch.addEventListener('click', switchGender);
 }
+
+
 
 const assetsGender = document.querySelectorAll('.asset-gender');
 
@@ -305,14 +311,15 @@ function showMale() {
 
 // Function to change the assets visible when the user switches gender
 function updateGenderAssets() {
-  if (localStorage.gender === 'female') {
-    showFemale();
-  } else if (localStorage.gender === 'male') {
-    showMale();
-  }
+    if (localStorage.gender === 'female') {
+      showFemale();
+    } else if (localStorage.gender === 'male') {
+      showMale();
+    }
 }
 
 updateGenderAssets();
+
 
 //  All The code Needed for saving character data and Allowing Change
 
@@ -326,10 +333,10 @@ const assetImgTile = document.querySelectorAll('picture.asset-gender');
 function splitter(stringSplitted) {
   if (stringSplitted[1] !== undefined) {
     const itemCat = stringSplitted[1].split('/');
-    localStorage.setItem(`${ itemCat[1] }`, `${ stringSplitted[1] }`);
+    localStorage.setItem(`${itemCat[1]}`, `${stringSplitted[1]}`);
   } else {
     const itemCat = stringSplitted[0].split('/');
-    localStorage.setItem(`${ itemCat[0] }`, `${ stringSplitted[0] }`);
+    localStorage.setItem(`${itemCat[0]}`, `${stringSplitted[0]}`);
   }
 }
 
@@ -350,7 +357,7 @@ function getTheImg(clickedAsset) {
 
 // Function to add a event listener to all the assets for a click
 function addListnersToAssets() {
-  Object.keys(assetImgTile).map(key => {
+  Object.keys(assetImgTile).map((key) => {
     assetImgTile[key].addEventListener('click', () => {
       getTheImg(assetImgTile[key]);
       initiateCharacter();
@@ -359,20 +366,23 @@ function addListnersToAssets() {
   // console.log()
 }
 
+
 const resetButtons = document.querySelectorAll('.reset');
 
 // Function to reset the Asset
 function resetAsset() {
-  Object.keys(resetButtons).map(key => {
+  Object.keys(resetButtons).map((key) => {
     resetButtons[key].addEventListener('click', () => {
       const resetCat = resetButtons[key].getAttribute('data-cat');
-      localStorage.removeItem(`${ resetCat }`);
+      localStorage.removeItem(`${resetCat}`);
       initiateCharacter();
     });
-  });
+  });  
 }
 
-addEventListener("click", () => {});
+addEventListener("click", () => {
+
+})
 
 // Excecute Functions For Assets Storage
 addListnersToAssets();
@@ -388,8 +398,8 @@ const loginForm = document.querySelector('.login-form');
 function loginHandler(event) {
   event.preventDefault;
   // console.log('hi');
-  const username = usernameInput.value;
-  localStorage.setItem('username', `${ username }`);
+  const username = usernameInput.value
+  localStorage.setItem('username', `${username}`);
 }
 
 const backButton = document.querySelector('.back-arrow');
@@ -401,7 +411,7 @@ if (backButton !== null) {
 }
 
 const uploadImg = document.querySelector('.bannerImg');
-if (uploadImg !== undefined && uploadImg !== null) {
+if(uploadImg !== undefined && uploadImg !== null) {
   uploadImg.addEventListener('change', () => {
     window.location = 'photo-taken1.html';
   });
@@ -410,14 +420,14 @@ if (uploadImg !== undefined && uploadImg !== null) {
 const xpGotWrap = document.querySelector('.xpwrap');
 
 if (xpGotWrap !== undefined && xpGotWrap !== null) {
-  setTimeout(function () {
+  setTimeout(function() {
     document.querySelector('.xpGot').style.height = '100%';
   }, 1000);
 };
 
 const lvlUpWrap = document.querySelector('.lvl-up');
 
-if (lvlUpWrap !== undefined && lvlUpWrap !== null) {
+if (lvlUpWrap  !== undefined && lvlUpWrap !== null) {
   setTimeout(function () {
     console.log('hi');
     const xpGotten = document.querySelector('.xpGot');
@@ -433,6 +443,7 @@ function redirect(url) {
 }
 
 
+
 // Loads serverworker So all assets gets cached for offline. So the user 1 doesnt have to load a 35 mb everytime and 2 so it works when the user does not have a working internet connection
 // ---------------------------
 // ---------------------------
@@ -441,14 +452,17 @@ function redirect(url) {
 // ENABLED IN THE END NOT EARLIER
 
 // ServiceWorker is a progressive technology. Ignore unsupported browsers
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js').then(function () {}, function () {});
-} else {
-  console.error('Ur browser does not support ServiceWorkers :( performance might be hurt');
-}
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js').then(function() {
+    }, function() {});
+  } else {
+    console.error('Ur browser does not support ServiceWorkers :( performance might be hurt');
+  }
+
 
 // Enable in the end NOT EARLIER
 // ---------------------------
 // ---------------------------
 // ---------------------------
 // ---------------------------
+

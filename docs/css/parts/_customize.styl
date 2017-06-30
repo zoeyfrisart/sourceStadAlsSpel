@@ -1,0 +1,173 @@
+.character
+  width: 100px
+  height: 100px
+  position: relative
+  background: #333
+  border-bottom-right-radius: 15px
+  overflow: hidden
+  img
+    position: absolute
+    top: 0
+    left :0
+    height: 100%
+    width: 100%
+    color: #333
+    font-family: body-font
+
+.create-char
+  width: 150px
+  height: 150px
+  border-radius: 0px
+  background: none
+  
+.char-acceF
+  z-index: 13
+  source, img
+    z-index: 13
+
+.char-manF
+  z-index: 7
+  source, img
+    z-index: 7
+
+.char-cloth
+  z-index: 6
+  source, img
+    z-index: 6
+
+.char-ear
+  z-index: 12
+  source, img
+    z-index: 12
+
+.char-bang
+  z-index: 11
+  source, img
+    z-index: 11
+
+.char-hairf
+  z-index: 10
+  source, img
+    z-index: 10
+
+.char-face
+  z-index: 9
+  source, img
+    z-index: 9
+
+.char-face-back
+  z-index: 8
+  source, img
+    z-index: 8
+
+.char-base
+  z-index: 5
+  source, img
+    z-index: 5
+
+.char-acceB
+  z-index: 4
+  source, img
+    z-index: 4
+
+.char-manB
+  z-index: 3
+  source, img
+    z-index: 3
+
+.char-hairb
+  z-index: 2
+  source, img
+    z-index: 2
+
+.items .row .col-xs-3
+  background: #fff
+  margin: 8px
+  padding: 1px
+  width: calc(25% - 20px)
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 10px
+
+  // border: 2px solid lime
+  img
+    width: 100%
+    height: auto
+
+.row1
+  margin-top: 8px
+
+.slider
+  width: 100%
+  min-height: 200px
+  height: 59vw
+  max-height: 280px
+
+.gender
+  display: flex
+  justify-content: center
+  align-items: center
+  flex: 1 1 25%
+  i
+    margin: 0px 8px
+    font-size: 20px
+    color: white
+
+
+.items .row
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+.tab-pane
+  position: relative
+  bottom: 0px
+
+.slider
+  opacity: 0
+  position: absolute
+  pointer-events: none
+  &.active-gender
+    opacity: 1
+    pointer-events: all
+.create
+  position: relative
+
+.to-bot
+  position: relative
+  min-height: 250px
+  width: 100%
+  bottom: 0px
+  display: block
+  
+
+.next
+  position: relative
+  top: 5vh
+
+.reset-wrap
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 61.797px
+
+.fa.reset
+  font-size: 40px
+  color: darker-red
+  filter: drop-shadow(0px 0px 1px main-red)
+
+.editchar
+  .to-bot
+    bottom: 70px
+  footer
+    position: absolute
+    bottom: 0px
+
+.relative
+  position: relative
+
+//  DESKOP FIXES
+@media all and (min-width: 1000px) 
+  .items .row .col-xs-3
+    max-width: 100px

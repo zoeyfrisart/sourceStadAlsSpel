@@ -1,0 +1,19 @@
+    <header>
+      @@if (back === "true"){
+        <button class="back-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+      }
+      <img src="links/img/@@logo" alt="logo BerGo" class="logo">
+      @@if (gender === "true"){
+        <div class="gender">
+          <i class="fa fa-female" aria-hidden="true"></i>
+          <label class="switch gender-switch">
+            <input name="gender" type="checkbox">
+            <div class="toggle round"></div>
+          </label>
+          <i class="fa fa-male" aria-hidden="true"></i>
+        </div>
+      }
+      @@if (needwhite === "true"){
+        <div class="white-space"></div>
+      }
+    </header>

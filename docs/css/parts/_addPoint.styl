@@ -1,0 +1,61 @@
+.addPhoto-point
+  width: 100vw
+  height: 56.25vw
+
+.addPhoto-point-input
+  background: #333
+  width: 100vw
+  height: 56.25vw
+
+.addPhoto-point-control
+  background: #333
+  border-radius: 0
+  width: 100vw
+  height: 56.25vw
+  font-size: 30px
+  &:lang(en)::after 
+    content: "📷";
+
+.arrow-back
+  color: white
+  position: absolute
+  z-index: 10
+  top: 5px
+  left: 5px
+
+.card
+  margin: 15px
+  background: #fff
+  width: calc(100% - 30px)
+  padding: 10px
+  h1
+    margin-top: 5px
+  form
+    width: calc(100% - 20px)
+    input
+      border: 1px solid rgba(black, .15)
+      border-radius: 10px
+      display: block
+      width: 100%
+      padding: 6px
+    label
+      width: 100%
+      display: block
+      padding-left: 6px
+      margin-top: 5px
+    textarea
+      width: 100%
+      display: block
+      border: 1px solid rgba(black, .15)
+      border-radius: 10px
+      resize: none
+      padding: 6px
+      &:focus
+        outline: none
+    button
+      width: 100%
+      margin: 5px 0px
+
+
+body, html
+  background: #fafafa
