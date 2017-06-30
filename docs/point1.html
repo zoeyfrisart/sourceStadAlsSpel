@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#333333">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <style>
+    body{
+      background: #d50000;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://20578.tk/app/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://20578.tk/app/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://20578.tk/app/favicon-16x16.png">
+  <link rel="mask-icon" href="https://20578.tk/app/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="https://20578.tk/app/favicon.ico">
+  <meta name="msapplication-config" content="https://20578.tk/app/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+  <title>Bergo</title>
+  <!--<script src="https://use.fontawesome.com/30888a8b47.js"></script>-->
+</head>
+
+<body>
+  <div class="container-fluid map-route">
+    <header class="charHead">
+  <a href="edit-character.html">
+  <div class="character ">
+  <picture class="char-ear">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="ear">
+  </picture>
+  <picture class="char-bang">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="bangs">
+  </picture>
+  <picture class="char-hairf">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="hair front">
+  </picture>
+  <picture class="char-face">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="hair face">
+  </picture>
+  <picture class="char-face-back">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="face back">
+  </picture>
+  <picture class="char-manF">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="mantle front">
+  </picture>
+  <picture class="char-cloth">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="clothing">
+  </picture>
+  <picture class="char-base">
+    <source class="relative" srcset="links/img/assets/male/base/noneall.webp" type="image/webp">
+    <img class="relative" src="links/img/assets/male/base/noneall.png" alt="base (skin)">
+  </picture>
+  <picture class="char-manB">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="mantle back">
+  </picture>
+  <picture class="char-hairb">
+    <source class="relative" srcset="links/img/placeholder.webp" type="image/webp">
+    <img class="relative" src="links/img/placeholder.png" alt="hair back">
+  </picture>
+</div>
+  </a>
+  <div class="col-xs-8 other-char">
+    <div class="xpBar">
+      <p>1</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div>
+      <p>2</p>
+    </div>
+    
+  </div>
+</header>
+
+    <div class="col-xs-12">
+      <div id="map"></div>
+    </div>
+    <div class="col-xs-12 point-added">
+      <p>point has been added to the map please go to the marked spot</p>
+    </div>
+
+    <footer>
+  
+  
+  
+  
+  
+    <a href="settings.html" class=""><i class="fa fa-cog" aria-hidden="true"></i></a>
+    <a href="home.html" class=""><i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="notification.html" class=""><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a href="trophy.html" class=""><i class="fa fa-trophy" aria-hidden="true"></i></a>
+  
+</footer>
+  </div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGZV4S4v6MfTg_kwqc6YeFjyEo_ZQn8wA"></script>
+
+  <script type="text/javascript" async>
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+      // Basic options for a simple Google Map
+      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+      var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 12,
+
+        disableDefaultUI: true,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(52.4972254, 13.2389171),
+
+        // How you would like to style the map. 
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{
+          "featureType": "landscape.man_made",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "gamma": "0.42"
+          }, {
+            "saturation": "100"
+          }, {
+            "hue": "#0cff00"
+          }, {
+            "lightness": "0"
+          }]
+        }, {
+          "featureType": "landscape.natural.landcover",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#37bda2"
+          }]
+        }, {
+          "featureType": "landscape.natural.terrain",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#37bda2"
+          }]
+        }, {
+          "featureType": "poi.attraction",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "visibility": "on"
+          }]
+        }, {
+          "featureType": "poi.business",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#e4dfd9"
+          }]
+        }, {
+          "featureType": "poi.business",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "poi.park",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#37bda2"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#70b99b"
+          }, {
+            "visibility": "on"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "color": "#fafeb8"
+          }, {
+            "weight": "1.25"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "labels",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "transit.station",
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "water",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#5ddad6"
+          }]
+        }]
+      };
+
+      // Get the HTML DOM element that will contain your map 
+      // We are using a div with id="map" seen below in the <body>
+      var mapElement = document.getElementById('map');
+
+      // Create the Google Map using our element and options defined above
+      var map = new google.maps.Map(mapElement, mapOptions);
+
+      // Let's also add a marker while we're at it
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(52.4972254, 13.2389171),
+        map: map,
+        label: '1',
+        title: 'Snazzy!'
+      });
+
+      marker.addListener('click', function() {
+        window.location = 'arrived1.html'
+      });
+    }
+  </script>
+  <!-- Scripts -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
